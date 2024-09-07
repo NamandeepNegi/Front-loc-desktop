@@ -49,7 +49,7 @@ const App = () => {
       navigator.geolocation.getCurrentPosition((position) => {
         const { latitude, longitude } = position.coords;
 
-        axios.post("http://localhost:5000/location", { name, latitude, longitude })
+        axios.post("https://backend-loc.onrender.com/location", { name, latitude, longitude })
           .then(response => console.log("Data sent:", response))
           .catch(error => console.error("Error sending location:", error));
       });
